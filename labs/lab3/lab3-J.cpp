@@ -24,7 +24,7 @@ int binary_search(vector<int> arr, int target)
     }
     if (arr[middle] == target)
     {
-        return middle;
+        return middle + 1;
     }
     else
     {

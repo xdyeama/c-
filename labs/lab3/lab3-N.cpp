@@ -10,11 +10,11 @@ int main()
     for (int i = 0; i < n; i++)
     {
         cin >> curr;
-        nums.emplace_back(curr);
+        nums.push_back(pow(curr, 2));
     }
-    set<int> unique_set(nums.begin(), nums.end());
-    for (auto num : unique_set)
+    for (int i = 0; i < nums.size(); i++)
     {
-        cout << num << " ";
+        cout << nums[i] << " ";
     }
+    return 0;
 }

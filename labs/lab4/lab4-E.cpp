@@ -6,16 +6,14 @@ int main()
 {
     int n;
     cin >> n;
-    int max = INT_MIN;
-    int curr;
     for (int i = 0; i < n; i++)
     {
-        cin >> curr;
-        if (curr > max)
+        for (int j = 0; j < i + 1; j++)
         {
-            max = curr;
+            cout << "[*]";
         }
+        cout << endl;
     }
-    cout << max;
+
     return 0;
 }

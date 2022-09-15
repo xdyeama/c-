@@ -3,6 +3,8 @@
         "*.json": "javascriptreact",
         "iostream": "cpp",
         "ostream": "cpp",
-        "cmath": "cpp"
+        "cmath": "cpp",
+        "istream": "cpp",
+        "*.tcc": "cpp"
     }
 }

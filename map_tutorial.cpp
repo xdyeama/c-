@@ -12,16 +12,18 @@ struct CityRecord
     uint64_t Population;
     double Latitude, Longitude;
 };
-
-// Create custom hash function for CityRecord custom datatype
-template <>
-struct hash<CityRecord>
+namespace std
 {
-    size_t operator()(const CityRecord &key)
+    // Create custom hash function for CityRecord custom datatype
+    template <>
+    struct hash<CityRecord>
     {
-        return hash<string>()(key.Name);
-    }
-};
+        size_t operator()(const CityRecord &key)
+        {
+            return hash<string>()(key.Name);
+        }
+    };
+}
 
 int main()
 {
@@ -43,14 +45,18 @@ int main()
     // }
 
     unordered_map<CityRecord, uint32_t> foundedMap;
-    map<string, CityRecord> cityMap;
+    foundedMap[CityRecord{"Melbourne", 5000000, 28.5, 44.5}] = 1980;
+    uint32_t melbourneFounded = foundedMap[CityRecord{"Melbourne", 5000000, 28.5, 44.5}];
+    cout << melbourneFounded;
+
+    map<string, CityRecord> cityMap << endl;
     cityMap["Melbourne"] = CityRecord{"Melbourne", 5000000, 28.5, 44.5};
     cityMap["Aktobe"] = CityRecord{"Aktobe", 8000000, 28.1, 42.8};
     cityMap["New York"] = CityRecord{"New York", 7461876, 13.1, 23.6};
     cityMap["London"] = CityRecord{"London", 13242131, 18.3, 32.4};
 
     CityRecord &aktobeData = cityMap["Aktobe"];
-    aktobeData.Population;
+    cout << aktobeData.Population;
 
     return 0;
 }
