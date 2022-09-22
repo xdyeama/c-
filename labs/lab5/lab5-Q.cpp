@@ -6,14 +6,17 @@ int main()
 {
     string s, t;
     cin >> s >> t;
-    bool isFound = 1;
+    bool isTrue = 1;
 
-    if (s.find(t) == -1)
+    for (int i = 0; i < t.length(); i = i + s.length())
     {
-        isFound = 0;
+        if (t.find(s, i) == string::npos)
+        {
+            isTrue = 0;
+            break;
+        }
     }
-
-    if (isFound == 1)
+    if (isTrue == 1)
     {
         cout << "YES";
     }
@@ -21,6 +24,5 @@ int main()
     {
         cout << "NO";
     }
-
     return 0;
 }

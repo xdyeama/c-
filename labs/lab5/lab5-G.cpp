@@ -6,14 +6,7 @@ int main()
 {
     string s, t;
     cin >> s >> t;
-    bool isFound = 1;
-
-    if (s.find(t) == -1)
-    {
-        isFound = 0;
-    }
-
-    if (isFound == 1)
+    if (strcmp(s.c_str(), t.c_str()) == 0)
     {
         cout << "YES";
     }

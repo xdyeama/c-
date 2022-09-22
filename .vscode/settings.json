@@ -1,10 +1,11 @@
 {
-    "files.associations": {
-        "*.json": "javascriptreact",
-        "iostream": "cpp",
-        "ostream": "cpp",
-        "cmath": "cpp",
-        "istream": "cpp",
-        "*.tcc": "cpp"
-    }
+  "files.associations": {
+    "*.json": "javascriptreact",
+    "iostream": "cpp",
+    "ostream": "cpp",
+    "cmath": "cpp",
+    "istream": "cpp",
+    "*.tcc": "cpp",
+    "ratio": "cpp"
+  }
 }
