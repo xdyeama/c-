@@ -1,11 +1,9 @@
-#include <bits/stdc++.h>
+#include <iostream>
 
 using namespace std;
 
-int main()
-{
-    int n, curr;
-    cin >> n;
+void difference(int n){
+    int curr;
     int arr1[n];
     int arr2[n];
     for (int i = 0; i < n; i++)
@@ -21,5 +19,12 @@ int main()
     {
         cout << arr2[i] << " ";
     }
+}
+
+int main()
+{
+    int n;
+    cin >> n;
+    difference(n);
     return 0;
 }

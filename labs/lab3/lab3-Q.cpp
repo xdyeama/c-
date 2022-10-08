@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include <iostream>
 
 using namespace std;
 
@@ -6,14 +6,19 @@ int main()
 {
     int n;
     cin >> n;
-    string message = "Yes";
+    bool isPrime = 1;
     for (int i = 2; i < n; i++)
     {
         if (n % i == 0)
         {
-            message = "No";
+            isPrime = 0;
         }
     }
-    cout << message;
+    if (isPrime == 1)
+    {
+        cout << "Yes";
+    }else{
+        cout << "No";
+    }
     return 0;
 }
