@@ -13,7 +13,7 @@ int main(){
     q2 = q1;
     q2.pop();
     int n1, n2;
-    while(q2.size() != 1){
+    while(!q2.empty()){
         n1 = q1.front();
         n2 = q2.front();
         if(n1 == 1 && n2 == 1){
@@ -25,14 +25,8 @@ int main(){
             q2.pop();
         }
     }
-    n1 = q1.front();
-    n2 = q2.front();
-    if(n1 == n2 && n1 == 1){
-        q1.pop();
-        q2.pop();
-    }
-
     q3.push(q1.front());
+
     int curr;
     while(!q3.empty()){
         curr = q3.front();

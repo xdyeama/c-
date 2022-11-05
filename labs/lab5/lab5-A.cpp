@@ -14,7 +14,7 @@ int main()
     {
         ch = s[i];
         chCode = (int)ch;
-        if (chCode >= 64 && chCode <= 90)
+        if (chCode >= 65 && chCode <= 90)
         {
             countCap += 1;
         }
