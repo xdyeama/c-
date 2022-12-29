@@ -26,7 +26,6 @@ int main(){
         }
     }
     q3.push(q1.front());
-
     int curr;
     while(!q3.empty()){
         curr = q3.front();

@@ -72,6 +72,7 @@
         "functional": "cpp",
         "iterator": "cpp",
         "utility": "cpp",
-        "queue": "cpp"
+        "queue": "cpp",
+        "numeric": "cpp"
     }
 }

@@ -1,8 +1,7 @@
 #include <iostream>
 #include <map>
-#include <cstdlib>
 #include <vector>
-#include <cmath>
+#include <algorithm>
 
 using namespace std;
 
@@ -42,11 +41,7 @@ int main(){
             int par2 = it2 -> first;
             int value2 = it2 -> second;
             if(par1 == par2){
-                if(value1 == value2){
-                    count += value1;
-                }else{
-                    count += min(value1, value2);
-                }
+                count += min(value1, value2);
             }
         }
     }
@@ -55,3 +50,4 @@ int main(){
 
     return 0;
 }
+

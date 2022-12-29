@@ -2,31 +2,27 @@
 #include <vector>
 #include <algorithm>
 #include <cmath>
+#include <iomanip>
 
+using namespace std;
 
-
-
-long long powers(){
-    static int i;
+long long double powers(){
+    static long long i;
     if(i == 0){
         return ++i;
     }
     long long a = i++;
-    long long b = a;
-    for(int j = 0; j < b; j++){
-        a *= a;
-    }
-    return a;
+    return powl(a, a);
 }
 
 int main(){
     int n;
-    std::cin >> n;
-    std::vector<long long> v(n+1);
-    std::generate(v.begin(), v.end(), powers);
-    std::vector<long long>::iterator it;
+    cin >> n;
+    vector<long double> v(n+1);
+    generate(v.begin(), v.end(), powers);
+    vector<long double>::iterator it;
     for(it = v.begin(); it != v.end(); it++){
-        std::cout << *it << " ";
+        cout << setprecision(0) << *it << " ";
     }
     return 0;
 }

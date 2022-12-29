@@ -9,7 +9,7 @@ int main(){
     int n, i;
     int isLoginValid = 0;
     std::cin >> n;
-    std::string input, l, p;
+    std::string l, p;
     std::vector<pair> vec;
     for(i = 0; i < n; i++){
         std::cin >> l >> p;

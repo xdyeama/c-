@@ -19,7 +19,7 @@ int main(){
     for(int i = 0; i < n; i++){
         q2 = q1;
         getline(std::cin, name);
-        while(!q2.empty()){
+        while(!q2.empty()){ 
             if(q2.front() == name){
                 isRegistered = 1;
                 break;

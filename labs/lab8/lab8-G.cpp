@@ -23,7 +23,7 @@ int main(){
     cin >> k;
     vector<int>::iterator it;
     for(it = vec.begin(); it != vec.end(); it++){
-        if(*it >= k){
+        if(*it > k){
             count += isPrime(*it);
         }
     }
